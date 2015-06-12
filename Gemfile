@@ -12,6 +12,8 @@ gem 'pg'
 
 gem 'rspec-rails'
 
+gem 'tweetstream'
+gem 'twitter'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
