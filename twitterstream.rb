@@ -4,9 +4,9 @@ require 'dotenv'
 Dotenv.load
 
 client = Twitter::Streaming::Client.new do |config|
-  config.consumer_key       = ENV["CONSUMER_KEY"]
-  config.consumer_secret    = ENV["API_SECRET"]
-  config.access_token    = ENV["ACCESS_TOKEN"]
+  config.consumer_key           = ENV["CONSUMER_KEY"]
+  config.consumer_secret        = ENV["API_SECRET"]
+  config.access_token           = ENV["ACCESS_TOKEN"]
   config.access_token_secret    = ENV["ACCESS_TOKEN_SECRET"]
 end
 
@@ -17,7 +17,7 @@ end
 #   config.access_token_secret    = "ql9H6NoL62t9PpniZ7WQ82PibyGMZcPKL03KZ1AB0X7ws"
 # end
 
-topics = ["emoji"] 
+topics = ["lol"]
 client.filter(track: topics.join(",")) do |object|
   puts object.text if object.is_a?(Twitter::Tweet)
 end
