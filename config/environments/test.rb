@@ -39,4 +39,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  TweetStream.configure do |config|
+    config.consumer_key       = ENV["CONSUMER-KEY"]
+    config.consumer_secret    = ENV["API-SECRET"]
+  end
 end

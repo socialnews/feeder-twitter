@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   # config.active_record.dump_schema_after_migration = false
+  TweetStream.configure do |config|
+    config.consumer_key       = ENV["CONSUMER-KEY"]
+    config.consumer_secret    = ENV["API-SECRET"]
+  end
 end
