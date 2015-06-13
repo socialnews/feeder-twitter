@@ -17,7 +17,7 @@ end
 #   config.access_token_secret    = "ql9H6NoL62t9PpniZ7WQ82PibyGMZcPKL03KZ1AB0X7ws"
 # end
 
-topics = ["emoji"] 
+topics = ["news"] 
 client.filter(track: topics.join(",")) do |object|
   puts object.text if object.is_a?(Twitter::Tweet)
 end
